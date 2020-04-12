@@ -1,0 +1,7 @@
+1.ObjectFactory与BeanFactory的区别：
+答：均提供依赖查找的能力
+不过ObjectFactory仅关注一个或一种类型的Bean依赖查找，并且自身不具备依赖查找的能力，能力则由BeanFactory输出。
+BeanFactory则提供了单一类型、集合类型以及层次性等多种依赖查找方式
+
+2.BeanFactory.GetBean是否线程安全
+答：是，操作过程中会增加互斥锁

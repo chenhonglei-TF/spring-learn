@@ -1,0 +1,4 @@
+1.springBean是如何注册的
+通过BeanDefinition和外部单体对象来注册
+2.什么是spring BeanDefinition
+3.spring是怎么样管理注册Bean

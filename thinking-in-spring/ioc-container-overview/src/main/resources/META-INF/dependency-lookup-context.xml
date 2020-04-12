@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.chenhl.thinking.in.spring.ioc.overview.domain.User">
+        <property name="id" value="19387"/>
+        <property name="name" value="红雷"/>
+    </bean>
+
+    <!-- primary: 表示如果有多个类型相同的对象，按类型查找时，只会查找出来primary为true的对象 -->
+    <bean id="superUser" class="com.chenhl.thinking.in.spring.ioc.overview.domain.SuperUser"
+          parent="user" primary="true">
+        <property name="address" value="杭州"/>
+    </bean>
+
+    <!-- 延迟查找 -->
+    <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+        <property name="targetBeanName" value="user"/>
+    </bean>
+</beans>
