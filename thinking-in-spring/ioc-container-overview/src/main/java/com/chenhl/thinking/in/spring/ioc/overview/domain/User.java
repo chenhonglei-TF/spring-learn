@@ -1,10 +1,17 @@
 package com.chenhl.thinking.in.spring.ioc.overview.domain;
 
+import com.chenhl.thinking.in.spring.ioc.overview.enums.City;
+import org.springframework.core.io.Resource;
+
 public class User {
 
     private Long id;
 
     private String name;
+
+    private City city;
+
+    private Resource configFileLocation;
 
     public Long getId() {
         return id;
@@ -22,11 +29,29 @@ public class User {
         this.name = name;
     }
 
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    public Resource getConfigFileLocation() {
+        return configFileLocation;
+    }
+
+    public void setConfigFileLocation(Resource configFileLocation) {
+        this.configFileLocation = configFileLocation;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", city=" + city +
+                ", configFileLocation=" + configFileLocation +
                 '}';
     }
 
