@@ -1,0 +1,14 @@
+1.有多少种依赖注入的方式
+构造器注入， setter注入，字段注入，方法注入，接口回调注入
+
+2. 构造器注入和setter注入哪个更好
+两种依赖注入的方式均可使用，如果是必须依赖的话，那么推荐使用构造器注入，setter注入用于可选依赖
+
+3.spring依赖注入的来源有哪些
+Spring BeanDefinition
+
+单例对象
+
+Resolvable Dependency
+
+@Value 外部化配置

@@ -1,0 +1,6 @@
+1.注入和查找的依赖来源是否相同
+不相同，依赖查找的来源仅限于Spring BeanDefinition 以及单例对象；而依赖注入的来源还包括Resolvable Dependency 以及@Value 所标注的外部化配置
+
+2.单例对象能在IOC容器启动后注册吗
+可以的，单例对象的注册与BeanDefinition不同，BeanDefinition会被ConfigrableListableBeanFactory#freezeConfiguration()方法影响
+从而冻结注册，单例对象没有这个限制。
